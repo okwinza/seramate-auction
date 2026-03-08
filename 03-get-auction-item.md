@@ -14,6 +14,12 @@ Returns all current auction listings for a single item on the specified realm.
 | `realmCode` | string | Realm slug (e.g. `draenor`) |
 | `itemId` | integer | WoW item ID |
 
+## Example
+
+```bash
+curl -s https://ah.seramate.com/api/public/auction/eu/draenor/items/194642
+```
+
 ## Response
 
 `200 OK` — array of [Auction Item](shared-types.md#auction-item-object) objects.

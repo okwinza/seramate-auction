@@ -25,6 +25,14 @@ Returns auction listings for multiple items at once. Duplicate item IDs are dedu
 |-------|------|----------|-------------|
 | `itemIds` | integer[] | yes | 1-100 items, all values must be integers |
 
+## Example
+
+```bash
+curl -s -X POST https://ah.seramate.com/api/public/auction/eu/draenor/items \
+  -H 'Content-Type: application/json' \
+  -d '{"itemIds": [19019, 72120, 52078]}'
+```
+
 ## Response
 
 `200 OK` — array of [Auction Item](shared-types.md#auction-item-object) objects. Same structure as [Get Auction Item](03-get-auction-item.md), with listings for all requested items combined.

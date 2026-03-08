@@ -14,6 +14,12 @@ Returns the current WoW Token price for a region.
 
 Note: this endpoint does not require a `realmCode` — the token price is region-wide.
 
+## Example
+
+```bash
+curl -s https://ah.seramate.com/api/public/auction/eu/token
+```
+
 ## Response
 
 `200 OK`

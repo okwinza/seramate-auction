@@ -14,6 +14,12 @@ Same data as [Get Auction Item](03-get-auction-item.md) but formatted as Markdow
 | `realmCode` | string | Realm slug (e.g. `draenor`) |
 | `itemId` | integer | WoW item ID |
 
+## Example
+
+```bash
+curl -s https://ah.seramate.com/api/public/auction/eu/draenor/items/194642/markdown
+```
+
 ## Response
 
 `200 OK` — `Content-Type: text/markdown`

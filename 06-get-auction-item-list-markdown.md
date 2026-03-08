@@ -25,6 +25,14 @@ Same data as [Get Auction Item List](04-get-auction-item-list.md) but formatted 
 |-------|------|----------|-------------|
 | `itemIds` | integer[] | yes | 1-100 items, all values must be integers |
 
+## Example
+
+```bash
+curl -s -X POST https://ah.seramate.com/api/public/auction/eu/draenor/items/markdown \
+  -H 'Content-Type: application/json' \
+  -d '{"itemIds": [19019, 72120, 52078]}'
+```
+
 ## Response
 
 `200 OK` — `Content-Type: text/markdown`

@@ -25,6 +25,14 @@ Returns the minimum buyout price for each requested item. Useful for quick price
 |-------|------|----------|-------------|
 | `itemIds` | integer[] | yes | 1-100 items, all values must be integers |
 
+## Example
+
+```bash
+curl -s -X POST https://ah.seramate.com/api/public/auction/eu/draenor/prices \
+  -H 'Content-Type: application/json' \
+  -d '{"itemIds": [19019, 72120]}'
+```
+
 ## Response
 
 `200 OK`

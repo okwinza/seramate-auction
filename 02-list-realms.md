@@ -12,6 +12,12 @@ Returns all available realms for a given region. Response is cached until midnig
 |-----------|------|-------------|
 | `regionCode` | string | Region code (`eu`, `us`, `kr`, `tw`) |
 
+## Example
+
+```bash
+curl -s https://ah.seramate.com/api/public/region/eu/realms
+```
+
 ## Response
 
 `200 OK`
