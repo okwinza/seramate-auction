@@ -80,38 +80,6 @@ Domain errors:
 }
 ```
 
-## Example Queries
+## Examples
 
-```bash
-# List EU realms
-curl -s https://ah.seramate.com/api/public/region/eu/realms
-
-# Get WoW Token price for EU
-curl -s https://ah.seramate.com/api/public/auction/eu/token
-
-# Get all auctions for a specific item
-curl -s https://ah.seramate.com/api/public/auction/eu/draenor/items/194642
-
-# Get auctions for multiple items at once
-curl -s -X POST https://ah.seramate.com/api/public/auction/eu/draenor/items \
-  -H 'Content-Type: application/json' \
-  -d '{"itemIds": [194641, 194642, 194643]}'
-
-# Quick price check (min buyout only)
-curl -s -X POST https://ah.seramate.com/api/public/auction/eu/draenor/prices \
-  -H 'Content-Type: application/json' \
-  -d '{"itemIds": [194641, 194642]}'
-
-# AI-powered search
-curl -s -X POST https://ah.seramate.com/api/public/auction/eu/draenor/search \
-  -H 'Content-Type: application/json' \
-  -d '{"naturalQuery": "epic plate helm ilvl 600+"}'
-
-# Same search but Markdown output (for AI agents)
-curl -s -X POST https://ah.seramate.com/api/public/auction/eu/draenor/search/markdown \
-  -H 'Content-Type: application/json' \
-  -d '{"naturalQuery": "legendary weapons sorted by price"}'
-
-# Single item Markdown (for AI agents)
-curl -s https://ah.seramate.com/api/public/auction/eu/draenor/items/194642/markdown
-```
+See [examples.md](examples.md) for copy-paste `curl` commands covering every endpoint, plus filter reference tables (quality, item class, slot, expansion, class bitmask, sort options).

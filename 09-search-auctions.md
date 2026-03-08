@@ -4,7 +4,7 @@
 POST /api/public/auction/{regionCode}/{realmCode}/search
 ```
 
-Searches auction listings using a natural language query. The query is processed by an AI model to extract item filters (name, quality, item level, slot, etc.) and sort criteria, which are then used to find and rank matching items.
+Searches auction listings using a natural language query. The query is processed by an AI model to extract item filters (name, quality, item level, slot, price constraints, etc.) and sort criteria, which are then used to find and rank matching items. Price constraints like "under 1000g" or "between 10g and 50g" are supported.
 
 ## Path Parameters
 
@@ -41,6 +41,16 @@ curl -s -X POST https://ah.seramate.com/api/public/auction/eu/draenor/search \
 curl -s -X POST https://ah.seramate.com/api/public/auction/eu/draenor/search \
   -H 'Content-Type: application/json' \
   -d '{"naturalQuery": "legendary weapons sorted by price"}'
+
+# Search with price constraints
+curl -s -X POST https://ah.seramate.com/api/public/auction/eu/draenor/search \
+  -H 'Content-Type: application/json' \
+  -d '{"naturalQuery": "epic swords under 1000g"}'
+
+# Search with price range
+curl -s -X POST https://ah.seramate.com/api/public/auction/eu/draenor/search \
+  -H 'Content-Type: application/json' \
+  -d '{"naturalQuery": "rare gems between 10g and 50g"}'
 
 # Search with explicit pagination
 curl -s -X POST https://ah.seramate.com/api/public/auction/eu/draenor/search \
